@@ -1,0 +1,358 @@
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Poppins, Helvetica, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+}
+
+.margin {
+  margin: 100px;
+}
+ 
+.logo {font-weight: 600;}
+
+.title {
+  color: var(--clr-slate400);
+  text-transform: uppercase;
+  font-size: 3rem;;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  font-weight: 800;
+}
+
+.subtitle {
+  color: var(--clr-slate800);
+  font-size: 1.5rem;;
+  line-height: 0.9;
+  color: #ffffffa7;
+}
+
+.description {
+  max-width: 60ch;
+  font-size: 1rem;
+  color: #ffffffa7;
+  text-align: justify; 
+  padding:20px
+}
+strong {
+  color: yellow;
+  margin: 30px;
+  padding-top: 20px;
+  text-transform: capitalize;
+}
+.header a {
+  color: #fff;
+}
+
+.header {
+  background-color: #000;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 900px;
+}
+
+.header ul,
+.header .menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #000;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #000;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+section {
+  padding-top: 80px;
+}
+
+
+#me_img {
+  border-radius: 50%;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.hero {
+  height: 100dvh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+.container-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.box {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 20px;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.box:hover {
+  background-color: yellow;
+  color: #000;
+  border: #000;
+  
+}
+
+.box2 {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 20px;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.box2 img {
+  width: auto; height: auto; max-width: 100%; max-height: 100%;
+}
+
+.box2:hover {
+  transform: translateY(-10px);
+  background-color: yellow;
+  border: #000;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #292929b7;
+  border-top: solid #fff 2px;
+  font-size: 0.8rem;
+}
+
+.center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.click-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+}
+
+.spike {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+  width: 0;
+  height: 0;
+  background: yellow;
+  border-radius: 0.3mm;
+  transform: rotate(var(--angle)) translateY(var(--distance));
+}
+
+.effect .spike {
+  animation: animate 0.75s;
+}
+
+.btn {
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -.05em;
+  background-color: yellow;
+  color: #000;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  box-shadow: 0 10px 20px #f4d03f80, 0 6px 6px #f4d03f80, 0 0 100px -10px #f4d03fc4;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px #f4d03f80, 0 8px 8px #f4d03f80, 0 0 100px -10px yellow;
+}
+
+
+@keyframes animate {
+  0% {
+    width: 3px;
+    height: 12px;
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(0);
+  }
+  2% {
+    width: 4px;
+    height: 16px;
+    opacity: 1;
+    transform: rotate(var(--angle)) translateY(0);
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+    transform: rotate(var(--angle)) translateY(var(--distance));
+  }
+}
+
+.wiggle-image {
+  scale: 50%;
+  display: inline-block;
+  position: relative;
+  animation: wiggle 2s infinite ease-in-out;
+  transition: transform 0.3s;
+}
+
+.wiggle-image:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
