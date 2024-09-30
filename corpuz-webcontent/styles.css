@@ -297,3 +297,13 @@ footer a {
 footer a:hover {
     color: #8f94fb;
 }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
