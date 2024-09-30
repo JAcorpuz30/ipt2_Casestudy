@@ -307,3 +307,22 @@ footer a:hover {
         transform: translateY(0);
     }
 }
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-text {
+        margin-left: 0;
+    }
+
+    .about-me img {
+        margin-bottom: 20px;
+    }
+
+    .skills, .projects, .contact {
+        margin: 20px 0;
+        padding: 20px;
+    }
+}
