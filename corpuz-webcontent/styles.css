@@ -126,3 +126,39 @@ header button:hover {
     line-height: 1.6;
     font-size: 1.1em;
 }
+.skills {
+    margin: 40px 0;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skills h2 {
+    font-size: 2em;
+    color: #4e54c8;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.skills .skill-bar {
+    margin-bottom: 20px;
+}
+
+.skills .skill-bar p {
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.skills .progress {
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skills .progress-bar {
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    height: 20px;
+    transition: width 1s;
+}
+
