@@ -73,4 +73,20 @@ body {
 .profile a:hover {
     background-color: #764ba2;
 }
-
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .profile {
+        width: 45%;
+    }
+}
+@media (max-width: 600px) {
+    .profile {
+        width: 100%;
+    }
+}
