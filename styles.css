@@ -36,7 +36,7 @@ body {
     align-items: center;
     position: relative;
 }
-}
+
 .profile .header img {
     border-radius: 50%;
     border: 5px solid white;
@@ -46,3 +46,31 @@ body {
     bottom: -60px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+.profile .body {
+    padding: 80px 20px 20px 20px;
+    text-align: center;
+}
+.profile h2 {
+    font-size: 1.6em;
+    margin: 15px 0;
+    color: #333;
+}
+.profile p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+}
+.profile a {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 15px;
+    background-color: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+.profile a:hover {
+    background-color: #764ba2;
+}
+
