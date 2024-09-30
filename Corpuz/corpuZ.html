@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Aldrei S. Corpuz Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #4e54c8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #8f94fb;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #4e54c8, #8f94fb);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            animation: fadeInUp 1.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.3em;
+            animation: fadeInUp 2s ease-out forwards;
+            opacity: 0;
+        }
+
+        header button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: #8f94fb;
+            border: none;
+            color: white;
+            font-size: 1em;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header button:hover {
+            background-color: #4e54c8;
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container Styles */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* About Me Section */
+        .about-me {
+            background: white;
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .about-me:hover {
+            transform: scale(1.02);
+        }
+
+        .about-me img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 10px solid white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-me-text {
+            flex: 1;
+            margin-left: 30px;
+        }
+
+        .about-me-text h2 {
+            color: #4e54c8;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-me-text p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        /* Skills Section */
+        .skills {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills h2 {
+            font-size: 2em;
+            color: #4e54c8;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .skills .skill-bar {
+            margin-bottom: 20px;
+        }
+
+        .skills .skill-bar p {
+            margin: 0 0 10px;
+            font-weight: 500;
+        }
+
+        .skills .progress {
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skills .progress-bar {
+            background: linear-gradient(90deg, #4e54c8, #8f94fb);
+            height: 20px;
+            transition: width 1s;
+        }
+
+        /* Projects Section */
+        .projects {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .projects h2 {
+            font-size: 2em;
+            color: #4e54c8;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #4e54c8;
+        }
+
+        .project-card p {
+            margin: 10px 0 0;
+            color: #666;
+        }
+
+        .project-card a {
+            margin-top: 10px;
+            display: inline-block;
+            color: #8f94fb;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            color: #4e54c8;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: #f9f9f9;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact h2 {
+            font-size: 2em;
+            color: #4e54c8;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            width: 100%;
+            font-size: 1em;
+            transition: border 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 1px solid #4e54c8;
+            outline: none;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            background-color: #4e54c8;
+            border: none;
+            color: white;
+            font-size: 1.1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #8f94fb;
+            transform: translateY(-2px);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #4e54c8;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #8f94fb;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-me {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-me-text {
+                margin-left: 0;
+            }
+
+            .about-me img {
+                margin-bottom: 20px;
+            }
+
+            .skills, .projects, .contact {
+                margin: 20px 0;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Justin Aldrei S. Corpuz</h1>
+        <p>Wevb and Mobile Application Developer | Designer</p>
+        <button>Contact Me</button>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="about-me container">
+        <img src="j.jpg" alt="Profile Picture">
+        <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>Hello, I'm Justin Aldrei S. Corpuz, a passionate web and mobile application developer with experience in creating dynamic and responsive websites/application. I enjoy solving problems and building solutions that make a difference.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills container">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <p>HTML/CSS</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <p>JavaScript</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <p>Figma</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill-bar">
+            <p>Java</p>
+            <div class="progress">
+                <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects container">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <img src="p.jpg" alt="Project Image">
+            <div>
+                <h3>Discipleship Journey Learning: Android-Based Applicaton For Bethany Church International Philippines</h3>
+                <p>A brief description of the project goes here.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="k.jpg" alt="Project Image">
+            <div>
+                <h3>. “Library Management System: Designing a User-Friendly GUI and Database with Java OOP”</h3>
+                <p>A brief description of the project goes here.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+        <h2>Contact</h2>
+        <form action="#" method="post" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Justin Aldrei S. Corpuz. All rights reserved.</p>
+        <p>
+            <a href="#">LinkedIn</a> |
+            <a href="#">GitHub</a> |
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>
